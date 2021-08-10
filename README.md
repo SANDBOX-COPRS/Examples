@@ -4,10 +4,8 @@ Test Repository. Can be deleted
 ## First commit test
 My first commit
 
-## Command to generate the maven project
-```sh
-mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
-```
+## Where to find the maven project? 
+The maven projet is forked from [this source](https://github.com/mkyong/maven-examples/tree/master/maven-code-coverage)
 
 ## Configure Codacy Action 
 To cofigure Codacy Action, we need connect to our account on condacy.com and [generate a API Token](https://app.codacy.com/account/access-management).
