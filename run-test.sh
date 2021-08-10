@@ -1,1 +1,1 @@
-mvn ---no-transfer-progress test;
+mvn --no-transfer-progress test;
