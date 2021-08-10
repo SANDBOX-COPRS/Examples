@@ -1,1 +1,1 @@
-mvn --batch-mode test;
+mvn ---no-transfer-progress test;
