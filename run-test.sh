@@ -1,1 +1,4 @@
-mvn --no-transfer-progress test;
+## Unable to parse command line options: Unrecognized option: ---no-transfer-progress
+# mvn --no-transfer-progress test;
+
+mvn test;
