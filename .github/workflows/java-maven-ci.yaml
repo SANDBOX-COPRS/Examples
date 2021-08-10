@@ -24,3 +24,15 @@ jobs:
         with:
           api-token: ${{ secrets.CODACY_API_TOKEN }}
           coverage-reports: target/site/jacoco/jacoco.xml
+
+      - name: Build jar 
+        run: |
+          mvn clean install 
+          mkdir staging && cp target/*.jar staging
+      
+
+      - name: Upload release
+        uses: actions/upload-artifact@v2
+        with:
+          name: Package
+          path: staging
