@@ -13,26 +13,26 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          mkdir documentation  # create output dir
+          mkdir output  # create output dir
           # this will also include README.md
           # echo "::set-output name=files::$(printf '"%s" ' *.md)"
           echo "::set-output name=files::$(find documentation -type f -name "*.md" -printf '"%P" ')"
       - name: Create PDF
         uses: docker://pandoc/latex
         with:
-          args: --table-of-contents --pdf-engine=xelatex --output=documentation/result.pdf ${{ steps.files_list.outputs.files }}
+          args: --table-of-contents --pdf-engine=xelatex --output=output/result.pdf ${{ steps.files_list.outputs.files }}
       
       - name: Create WORD
         uses: docker://pandoc/latex
         with:
-          args: --table-of-contents --from=markdown --to=docx --output=documentation/result.docx ${{ steps.files_list.outputs.files }}      
+          args: --table-of-contents --from=markdown --to=docx --output=output/result.docx ${{ steps.files_list.outputs.files }}      
           
       - name: Create ODT
         uses: docker://pandoc/latex
         with:
-          args: --table-of-contents --from=markdown --to=odt --output=documentation/result.odt ${{ steps.files_list.outputs.files }}          
+          args: --table-of-contents --from=markdown --to=odt --output=output/result.odt ${{ steps.files_list.outputs.files }}          
 
       - uses: actions/upload-artifact@master
         with:
           name: documentation
-          path: documentation
+          path: output
