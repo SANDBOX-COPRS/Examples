@@ -1,22 +1,36 @@
-# TestRepoLino
-Test Repository. Can be deleted.
+# Getting started using the GitHub CI 
 
-## First commit test
-My first commit
+## Create a repo 
 
-## Where to find the maven project? 
-The maven projet is forked from [this source](https://github.com/mkyong/maven-examples/tree/master/maven-code-coverage)
+Create a repo following [this tutorial](https://docs.github.com/en/get-started/quickstart/create-a-repo)
 
-# Codacy
-## Configure Codacy Action 
-To cofigure Codacy Action, we need connect to our account on condacy.com and [generate a API Token](https://app.codacy.com/account/access-management).
-Then store this API token in a variabe called `CODACY_API_TOKEN` on GitHub, on the repository secret section. 
+## Push your java maven project
 
-## Codacy Dashboard
-Codacy Dashboard can be found [there](https://app.codacy.com/gh/CSC-PS-S2/TestRepoLino/dashboard)
-Qualtiy and security gates are parametrables on the [Quality Settings section](https://app.codacy.com/gh/CSC-PS-S2/TestRepoLino/settings/quality)
+Push your project on the repo. The project should look like [this one](https://github.com/mkyong/maven-examples/tree/master/maven-code-coverage)
 
-## Jacoco code coverage report
-In order for Codacy to display the code coverage report in his GUI, the jacoco.xml file must be available at the path: `target/site/jacoco/jacoco.xml`
-This path is configurable on the java-maven-ci.yaml file. 
-Keep in min that this path is the default path where Jacoco will generate the report file. 
+## Enable the Gitub Action 
+
+On the root of the repo, create a folder called `.github`. 
+Inside this folder, create another folder called `workflows`
+
+Inside the `workflows` folder, paste [this GitHub Action configuration](.github/workflows/java-maven-ci.yaml)
+Then push your modifications
+
+
+To understand the configuration file, you can refer to the [official documentation](https://github.com/features/actions)
+
+## Check the state of the CI on the Action tab  
+
+Click on the Action tab on the GitHub repository. The output should look like this:
+
+![GitHub Action Tab](.github/images/github_action_tab.png)
+
+
+Click on the first CI run. And then on Package. Github will propose you to download a file. That's the Jar that has been created
+
+
+## Check the security issues 
+
+Click on the Security tab on the GitHub repository. Go on the `Code scanning alert` section. 
+There you will find all the security alerts founded by Anchore
+![Code scanning alert](.github/images/code_scanning_alert.png)
