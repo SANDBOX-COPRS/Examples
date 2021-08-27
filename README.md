@@ -21,8 +21,13 @@ To understand the configuration file, you can refer to the [official documentati
 
 ## Check the state of the CI on the Action tab  
 
-Click on the [Action tab](https://github.com/SANDBOX-COPRS/Examples/actions) on the GitHub repository. The output should look like this:
-Click on the first CI run. And then on Package. Github will propose you to download a file. That's the Jar that has been created.  
+Click on the [Action tab](https://github.com/SANDBOX-COPRS/Examples/actions) on the GitHub repository. 
+
+The output should look like this:
+
+Click on the first CI run. And then on Package. Github will propose you to download a file. 
+
+That's the Jar that has been created.  
 ![retrive-jar](.github/images/retrieve_jar.png)
 
 ## Technical Points
