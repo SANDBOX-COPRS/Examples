@@ -21,16 +21,10 @@ To understand the configuration file, you can refer to the [official documentati
 
 ## Check the state of the CI on the Action tab  
 
-Click on the Action tab on the GitHub repository. The output should look like this:
+Click on the [Action tab](https://github.com/SANDBOX-COPRS/Examples/actions) on the GitHub repository. The output should look like this:
+Click on the first CI run. And then on Package. Github will propose you to download a file. That's the Jar that has been created.  
+![retrive-jar](.github/images/retrieve_jar.png)
 
-![GitHub Action Tab](.github/images/github_action_tab.png)
+## Technical Points
 
-
-Click on the first CI run. And then on Package. Github will propose you to download a file. That's the Jar that has been created
-
-
-## Check the security issues 
-
-Click on the Security tab on the GitHub repository. Go on the `Code scanning alert` section. 
-There you will find all the security alerts founded by Anchore
-![Code scanning alert](.github/images/code_scanning_alert.png)
+Technicals explantations can be found on [this file](technical_points.md)
