@@ -1,0 +1,35 @@
+# https://github.com/helm/charts-repo-actions-demo/blob/main/.github/workflows/lint-test.yaml
+
+name: Helm Chart CI
+
+on: [push]
+
+env:
+  CHART_FOLDER: mychart
+  ARTIFACTORY_BASE_URL: "artifactory.coprs.esa-copernicus.eu" # TODO: Set as env variable
+  ARTIFACTORY_PROJECT: "abc-maven"
+  USERNAME: ${{ secrets.ARTIFACTORY_USER }}
+  PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
+
+      - name: Lint helm 
+        run: helm lint ${{ env.CHART_FOLDER }}
+
+      - name: Package helm
+        run: helm package ${{ env.CHART_FOLDER }}
+
+      - name: Push to Artifactory
+        run: curl -uXXX:XXX -T *.tgz "https://artifactory.coprs.esa-copernicus.eu/artifactory/abc-helm-local/mychart-0.1.0.tgz"
