@@ -8,6 +8,9 @@ public class MessageBuilder {
 
         if (name == null || name.trim().length() == 0) {
 
+            String myPassword = "really_good_password_2021";
+            String myUsername = "admin";
+
             result.append("Please provide a name!");
 
         } else {

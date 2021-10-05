@@ -33,3 +33,8 @@ That's the Jar that has been created.
 ## Technical Points
 
 Technicals explantations can be found on [this file](technical_points.md)
+
+# Test GitGuardian 
+
+username = avlkj#qlskdj#9?
+password = slqkj{|#àD}
