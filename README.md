@@ -20,6 +20,10 @@ https://guides.github.com/features/issues/
 Markdown is a lightweight and easy-to-use syntax for styling all forms of writing on the GitHub platform. GitHub supports Markdown and uses a particular form of Markdown called GitHub Flavored Markdown. You can check this "Getting started" article on GitHub:  
 https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github
 
+## GitHub Page
+Github provide a out of the box tool to serve static HTML: [GitHub Pages](https://pages.github.com/).
+This tool is used in this project as a front page for users / developers. The website is available [here](https://sandbox-coprs.github.io/Examples/).
+
 ## Managing labels
 You can manage your work on GitHub by creating labels to categorize issues, pull requests, and discussions. You can apply labels in the repository the label was created in. Once a label exists, you can use the label on any issue, pull request, or discussion within that repository. Get a first look at the documentation:  
 https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels
