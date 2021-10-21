@@ -37,3 +37,9 @@ Technicals explantations can be found on [this file](technical_points.md)
 
 username = avlkj#qlskdj#9?
 password = slqkj{|#àD}
+
+# Test release
+
+Test auto release with (GitHub Automatic Releases|https://github.com/marketplace/actions/automatic-releases)
+
+
