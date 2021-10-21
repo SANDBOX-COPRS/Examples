@@ -16,7 +16,6 @@ Inside this folder, create another folder called `workflows`
 Inside the `workflows` folder, paste [this GitHub Action configuration](.github/workflows/java-maven-ci.yaml)
 Then push your modifications  
 
-
 To understand the configuration file, you can refer to the [official documentation](https://github.com/features/actions)
 
 ## Check the state of the CI on the Action tab  
