@@ -34,7 +34,11 @@ That's the Jar that has been created.
 
 Technicals explantations can be found on [this file](technical_points.md)
 
-# Test GitGuardian 
+## Pull the image
 
-username = avlkj#qlskdj#9?
-password = slqkj{|#àD}
+The image can be pulled using the following command:
+
+```bash
+docker login -u XXX -p XXX
+docker pull artifactory.coprs.esa-copernicus.eu/abc-docker/sandbox-coprs/examples:java-docker-ci
+```
